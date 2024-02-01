@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'prod',
     'stf',
     'crispy_forms',
+    'rest_framework',
 
 ]
 
