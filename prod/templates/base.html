@@ -1,0 +1,80 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your News Website</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'style/mycss.css' %}">
+</head>
+<body>
+
+<header>
+    <form method="get" action="{% url 'search_view' %}">
+        <input type="text" name="q" placeholder="Search..." class="wide-input">
+        <button type="submit">Search</button>
+    </form>
+</header>
+
+<nav>
+    <a href="{% url 'add_sale' %}">بيع</a>
+    <a href="{% url 'add_p' %}">اضف منتج</a>
+    <a href="{% url 'plot_cumulative_sales' %}">استعراض</a>
+    <a href="{% url 'login' %}">تسجيل دخول</a>
+    <a href="{% url 'logout' %}">تسجيل خروج</a>
+    <a href="{% url 'add_cat' %}">اضف عينة</a>
+    <a href="{% url 'list_sale' %}">المبيعات</a>
+    <a href="{% url 'boss_ex' %}">اضافة خرجيات المدير</a>
+    <a href="{% url 'boss_list' %}">خرجيات المدير</a>
+    <a href="{% url 'date_sale' %}">المبيعات باليوم</a>
+    <a href="{% url 'home' %}">الرئيسية</a>
+    <a href="{% url 'register' %}">اشتراك</a>
+</nav>
+
+<!-- Second navigation bar -->
+<nav id="second-nav">
+    <a href="{% url 'credit_list' %}">ديون الزباين</a>
+    <a href="{% url 'list_staff' %}">قايمة العمال</a>
+    <a href="{% url 'add_staff' %}">سجل عامل</a>
+    <a href="{% url 'create_salary' %}">تحديد الرواتب</a>
+    <a href="{% url 'salary_list' %}">رواتب العمال</a>
+    <a href="{% url 'prod_loan' %}">تفاصيل المتخلصين</a>
+    <a href="{% url 'list_product' %}">تفاصيل المنتجات</a>
+    <a href="{% url 'list_staff' %}">كشف العمال</a>
+</nav>
+
+<nav id="third">
+    <a href="{% url 'boss_ex' %}">اضافة خرجيات المدير</a>
+    <a href="{% url 'boss_list' %}">خرجيات المدير</a>
+    <a href="{% url 'date_sale' %}">المبيعات باليوم</a>
+    <a href="{% url 'home' %}">الرئيسية</a>
+</nav>
+
+{% block content %}
+{% endblock %}
+
+<section>
+    <!-- Main content area -->
+    <h2></h2>
+    <!-- Add your news articles or content here -->
+</section>
+
+<section>
+    <!-- Featured stories or additional content -->
+    <!-- Add more content here -->
+</section>
+
+<!-- League section (placeholder) -->
+<section id="league-section">
+    <h2></h2>
+    <!-- Add content related to sports league -->
+</section>
+
+<footer>
+    <p>&copy; 2024 NADA_bkri-LMTD. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
